@@ -10,6 +10,11 @@ npm test           # scoring and staircase logic
 npm run build      # static bundle in dist/
 ```
 
+Published at <https://teja1995.github.io/Astronaut_Training/>. Every push to
+`main` runs the tests and, if they pass, redeploys. `vite.config.ts` sets
+`base: './'`, so the bundle works under the repository subpath without further
+configuration.
+
 ## Shape of the code
 
 ```
