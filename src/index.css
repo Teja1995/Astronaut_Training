@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-paper: #f2f3f1;
+  --color-graphite: #232628;
+  --color-rule: #8a959c;
+  --color-signal: #2d5ba8;
+  --color-wrong: #a8442d;
+
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+:root {
+  color-scheme: light;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-graphite);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  font-feature-settings: inherit;
+}
+
+/* Motion only for user-caused state changes, and not at all if unwanted. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
